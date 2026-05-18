@@ -6,3 +6,11 @@ coverage/
 *.log
 .env*
 !.env.example
+# Ignore compiled Java files
+backend/target/
+
+# Ignore real database credentials
+backend/src/main/resources/application.properties
+
+# Ignore local database files
+*.db
