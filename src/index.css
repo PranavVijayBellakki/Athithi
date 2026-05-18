@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --color-gold-50: #fdfaf2;
+  --color-gold-100: #f9f1db;
+  --color-gold-200: #f1dfb3;
+  --color-gold-300: #e5c681;
+  --color-gold-400: #d8a650;
+  --color-gold-500: #c4832c;
+  --color-gold-600: #aa6822;
+  --color-gold-700: #8d501b;
+  --color-gold-800: #733e18;
+  --color-gold-900: #5f3115;
+  --color-gold-950: #351707;
+}
+
+/* Glassmorphism backing styles */
+.luxury-glass {
+  background: rgba(10, 18, 38, 0.55);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(196, 131, 44, 0.18); /* subtle gold border */
+  box-shadow: 
+    0 15px 45px -12px rgba(0, 0, 0, 0.8),
+    inset 0 1px 1px rgba(255, 255, 255, 0.05),
+    inset 0 0 25px rgba(196, 131, 44, 0.05);
+}
+
+.luxury-glass-button {
+  background: linear-gradient(135deg, rgba(196, 131, 44, 0.18) 0%, rgba(196, 131, 44, 0.05) 100%);
+  border: 1px solid rgba(196, 131, 44, 0.35);
+  color: #f1dfb3;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-glass-button:hover {
+  background: linear-gradient(135deg, rgba(196, 131, 44, 0.3) 0%, rgba(196, 131, 44, 0.1) 100%);
+  border-color: rgba(196, 131, 44, 0.75);
+  box-shadow: 0 0 25px rgba(196, 131, 44, 0.3);
+  transform: translateY(-2px);
+}
+
+.luxury-glass-button:active {
+  transform: translateY(0px);
+}
+
+/* Shimmer Gold Gradient effect */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #fdfaf2 0%, #e5c681 45%, #c4832c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Soft gold background hover effect */
+.bg-gold-gradient-pulse {
+  background: linear-gradient(135deg, #c4832c 0%, #aa6822 50%, #733e18 100%);
+  box-shadow: 0 4px 15px rgba(196, 131, 44, 0.3);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bg-gold-gradient-pulse:hover {
+  background: linear-gradient(135deg, #d8a650 0%, #c4832c 50%, #aa6822 100%);
+  box-shadow: 0 0 35px rgba(196, 131, 44, 0.65);
+  transform: translateY(-2px);
+}
+
+.bg-gold-gradient-pulse:active {
+  transform: translateY(0px);
+}
+
+/* Custom fade animations */
+@keyframes softPulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; transform: scale(1.02); }
+}
+
+.animate-soft-pulse {
+  animation: softPulse 8s infinite ease-in-out;
+}
+
+/* Premium text drop shadow for overlay readability over bright images */
+.text-shadow-premium {
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.95), 0 1px 4px rgba(0, 0, 0, 0.95);
+}
+
+.text-shadow-subtle {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+}

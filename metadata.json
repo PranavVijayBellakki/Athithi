@@ -1,0 +1,5 @@
+{
+  "name": "Remix: Atithi Management System",
+  "description": "A full-stack hotel booking system featuring a normalized SQL database, triggers, and comprehensive guest management.",
+  "requestFramePermissions": []
+}
